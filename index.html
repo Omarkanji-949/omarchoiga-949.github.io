@@ -1,14 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Omar Ramadan Delights</title>
+    <style>
+        /* --- Global Styles --- */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fdf6e3; /* soft cream background */
+            color: #333;
+        }
+        header {
+            background: #006400; /* deep green */
+            color: #ffd700; /* gold text */
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background: #228b22; /* green nav bar */
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #006400;
+            border-bottom: 2px solid #ffd700;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        /* --- Product Table --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #006400;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #228b22;
+            color: #ffd700;
+        }
+        /* --- Buttons --- */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background: #ffd700;
+            color: #006400;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: #e6c200;
+        }
+        /* --- Gallery --- */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 48%;
+            border-radius: 10px;
+        }
+        /* Footer */
+        footer {
+            background: #006400;
+            color: #ffd700;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Omar Ramadan Delights</h1>
-    <p>Your trusted place for the finest Ramadan products.</p>
 
-    <a href="https://wa.me/+254113355381">
-        Chat with me on WhatsApp
-    </a>
+    <!-- Header -->
+    <header>
+        <h1>Omar Ramadan Delights</h1>
+        <p>Bringing you the finest Ramadan products</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#products">Products</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#contact">Contact</a>
+        <a href="#offers">Special Offers</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+
+    <!-- About Us -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Omar Ramadan Delights is dedicated to providing high-quality Ramadan essentials and treats to our customers. We focus on freshness, affordability, and excellent service.</p>
+    </section>
+
+    <!-- Products -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Price (KES)</th>
+            </tr>
+            <tr>
+                <td>Dates</td>
+                <td>500 / kg</td>
+            </tr>
+            <tr>
+                <td>Peanuts</td>
+                <td>300 / kg</td>
+            </tr>
+            <tr>
+                <td>Knorr Beef Cubes</td>
+                <td>150 / pack</td>
+            </tr>
+            <tr>
+                <td>Juice</td>
+                <td>120 / bottle</td>
+            </tr>
+            <tr>
+                <td>Biryani Rice</td>
+                <td>800 / 5kg pack</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Delivery Information -->
+    <section id="delivery">
+        <h2>Delivery Information</h2>
+        <p>We deliver within Nairobi and surrounding areas. Orders placed before 4 PM are delivered the same day. For other locations, delivery may take 1–2 days.</p>
+    </section>
+
+    <!-- WhatsApp / SMS Contact -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <a class="button" href="https://wa.me/254113355381">Chat on WhatsApp</a>
+        <p>Or SMS us at <strong>+254113355381</strong></p>
+    </section>
+
+    <!-- Special Ramadan Offers -->
+    <section id="offers">
+        <h2>Special Ramadan Offers</h2>
+        <ul>
+            <li>Buy 2kg Dates, get 500g free</li>
+            <li>Juice bundle discounts for Ramadan</li>
+            <li>Free delivery for orders over KES 2000</li>
+        </ul>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/400x300?text=Dates" alt="Dates">
+            <img src="https://via.placeholder.com/400x300?text=Peanuts" alt="Peanuts">
+            <img src="https://via.placeholder.com/400x300?text=Knorr+Beef+Cubes" alt="Knorr Beef Cubes">
+            <img src="https://via.placeholder.com/400x300?text=Biryani+Rice" alt="Biryani Rice">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Omar Ramadan Delights. All rights reserved.</p>
+        <p><a href="mailto:omar@example.com">Email us</a> | <a href="https://wa.me/254113355381">WhatsApp / SMS: +254113355381</a></p>
+    </footer>
+
 </body>
 </html>
+
