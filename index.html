@@ -12,6 +12,7 @@ body {
     background: #f9f9f9;
 }
 
+/* HEADER */
 header {
     background: linear-gradient(135deg, #0b6623, #1c8b3c);
     color: #ffd700;
@@ -34,6 +35,7 @@ header h2 {
     color: #fff;
 }
 
+/* NAV */
 nav {
     background: #006400;
     display: flex;
@@ -48,6 +50,7 @@ nav a {
     font-weight: bold;
 }
 
+/* SECTIONS */
 section {
     padding: 40px 20px;
     max-width: 1100px;
@@ -61,6 +64,7 @@ section {
     margin-bottom: 20px;
 }
 
+/* PRODUCTS TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -104,13 +108,42 @@ input[type="number"], input[type="text"] {
     color: #ffd700;
 }
 
-.grand-total {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #006400;
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
 }
 
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* BUSINESS INFO IMAGE */
+.business-card {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.business-card a {
+    display: inline-block;
+}
+
+.business-card img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.business-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* WHATSAPP FLOAT */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -128,6 +161,7 @@ input[type="number"], input[type="text"] {
     box-shadow: 0 4px 8px rgba(0,0,0,.3);
 }
 
+/* FOOTER */
 footer {
     background: #006400;
     color: #ffd700;
@@ -135,6 +169,7 @@ footer {
     padding: 20px;
 }
 
+/* MOBILE */
 @media (max-width: 600px) {
     header h1 { font-size: 2rem; }
     table, th, td { font-size: 0.9rem; }
@@ -151,9 +186,21 @@ footer {
 </header>
 
 <nav>
+    <a href="#about">About</a>
     <a href="#products">Products</a>
+    <a href="#locations">Locations</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
 </nav>
+
+<section id="about">
+<h2 class="section-title">About Us</h2>
+<p>
+Omar Ramadan Delights is dedicated to providing high-quality Ramadan essentials and treats
+to our customers. We focus on freshness, affordability, accessibility and excellent service.
+</p>
+</section>
 
 <section id="products">
 <h2 class="section-title">Our Products</h2>
@@ -168,51 +215,80 @@ footer {
 
 <tr data-product="Dates">
     <td>Dates</td>
-    <td data-price="50">50</td>
+    <td data-price="50/sachet">50</td>
     <td><input type="number" min="0" value="0" oninput="updateTotals()"></td>
     <td class="total">0</td>
 </tr>
 
 <tr data-product="Plumpy Nut">
     <td>Plumpy’ Nut</td>
-    <td data-price="50">50</td>
+    <td data-price="50/pkt">50</td>
     <td><input type="number" min="0" value="0" oninput="updateTotals()"></td>
     <td class="total">0</td>
 </tr>
 
 <tr data-product="Knorr Beef Cubes">
     <td>Knorr Beef Cubes</td>
-    <td data-price="150">150</td>
+    <td data-price="10/3 cubes">150</td>
     <td><input type="number" min="0" value="0" oninput="updateTotals()"></td>
     <td class="total">0</td>
 </tr>
 
 <tr data-product="Juice">
     <td>Juice</td>
-    <td data-price="120">120</td>
+    <td data-price="90/500ml">120</td>
     <td><input type="number" min="0" value="0" oninput="updateTotals()"></td>
     <td class="total">0</td>
 </tr>
 
 <tr data-product="Biryani Rice">
     <td>Biryani Rice</td>
-    <td data-price="110">110</td>
+    <td data-price="110/kg">110</td>
     <td><input type="number" min="0" value="0" oninput="updateTotals()"></td>
     <td class="total">0</td>
 </tr>
 </table>
 
-<div class="grand-total">
-    Grand Total: KES <span id="grandTotal">0</span>
-</div>
+<p><strong>Grand Total:</strong> KES <span id="grandTotal">0</span></p>
 
-<h3>Delivery Location</h3>
-<input type="text" id="location" placeholder="Enter your location (e.g. Meru Town)">
+<input type="text" id="locationInput" placeholder="Enter your location">
 
 <br><br>
-
 <button class="order-btn" onclick="sendOrder()">📲 Place Order on WhatsApp</button>
 <button class="print-btn" onclick="window.print()">🖨️ Print Price List</button>
+</section>
+
+<section id="locations">
+<h2 class="section-title">Our Locations</h2>
+<ul>
+    <li>Outside opposite Nchiru Famous</li>
+    <li>Outside opposite Comrade shop at the market entry gate</li>
+    <li>For those residing at school Hostels, visit at Adesh's place, STC</li>
+</ul>
+</section>
+
+<section id="delivery">
+<h2 class="section-title">Delivery</h2>
+<p>✔ Free delivery<br>✔ Payment after delivery</p>
+</section>
+
+<section id="gallery">
+<h2 class="section-title">Gallery</h2>
+<div class="gallery">
+    <img src="images/Dates.jpg" alt="Dates">
+    <img src="images/plumpy' nut.jpg" alt="Plumpy Nut">
+    <img src="images/Knorr beef cubes.jpg" alt="Knorr Beef Cubes">
+    <img src="images/Quencher Orange.jpg" alt="Juice">
+    <img src="images/Biryani Long Grain.webp" alt="Biryani Rice">
+</div>
+
+<!-- BUSINESS INFO IMAGE (CLICKABLE LINK) -->
+<div class="business-card">
+    <a href="https://omarkanji-949.github.io/omarchoiga-949.github.io/" target="_blank">
+        <img src="images/Omar Image Business Info.png" alt="Omar Ramadan Delights Business Information">
+    </a>
+    <p>Tap the image to visit our website</p>
+</div>
 </section>
 
 <section id="contact">
@@ -241,10 +317,6 @@ function updateTotals() {
     document.getElementById("grandTotal").innerText = grandTotal;
 }
 
-function generateOrderRef() {
-    return "ORD-" + Math.floor(Math.random() * 90000 + 10000);
-}
-
 function sendOrder() {
     let message = "Hello Omar Ramadan Delights,%0A%0AI would like to order:%0A";
     let hasItems = false;
@@ -253,7 +325,6 @@ function sendOrder() {
         const product = row.dataset.product;
         const qty = parseInt(row.querySelector("input").value) || 0;
         const total = row.querySelector(".total").innerText;
-
         if (qty > 0) {
             message += `- ${qty} x ${product} (KES ${total})%0A`;
             hasItems = true;
@@ -265,22 +336,16 @@ function sendOrder() {
         return;
     }
 
-    const location = document.getElementById("location").value.trim();
+    const location = document.getElementById("locationInput").value || "Not specified";
     const grandTotal = document.getElementById("grandTotal").innerText;
-    const orderRef = generateOrderRef();
+    const orderRef = "ORD-" + Math.floor(Math.random() * 90000 + 10000);
 
+    message += `%0ALocation: ${location}`;
     message += `%0AOrder Ref: ${orderRef}`;
-    message += `%0ALocation: ${location || "Not specified"}`;
     message += `%0ATotal Amount: KES ${grandTotal}`;
 
-    const confirmOrder = confirm(
-        "Confirm your order?\n\nOrder Ref: " + orderRef +
-        "\nTotal Amount: KES " + grandTotal
-    );
-
-    if (confirmOrder) {
-        const url = "https://wa.me/254113355381?text=" + message;
-        window.open(url, "_blank");
+    if (confirm("Confirm order?\n\nTotal: KES " + grandTotal)) {
+        window.open("https://wa.me/254113355381?text=" + message, "_blank");
     }
 }
 </script>
